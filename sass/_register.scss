@@ -1,0 +1,99 @@
+body {
+    height: 100vh !important;
+    box-sizing: border-box;
+    @include flex-center;
+}
+
+main {
+    .content {
+        background-color: #F5F7FF;
+        padding: 60px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        @include flex;
+
+        img {
+            border-radius: 10px;
+            height: 536px;
+            width: 49%;
+            @media only screen and (max-width: 992px) {
+                    width: 100% !important;
+                }
+        }
+
+        .info {
+            color: #2D2D2D;
+            width: 45%;
+@media only screen and (max-width: 992px) {
+        width: 100% !important;
+    }
+            h4 {
+                font-size: 56px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+            .user,.email,.password{
+                position: relative;
+                &::after {
+                        content: "";
+                        background: url(../img/user.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        height: 20px;
+                        width: 20px;
+                        position: absolute;
+                        left: 20px;
+                        top: 20px;
+                        z-index: 10;
+                    }
+            }
+            .email{
+                &::after{
+                    background: url(../img/email.png);
+                    background-size: cover;
+                }
+            }
+            .password{
+                &::after{
+                    background: url(../img/lock.png);
+                    background-size: cover;
+                }
+            }
+            input{
+                box-sizing: border-box;
+                height: 60px;
+                    width: 450px;
+                    border-radius: 10px;
+                    padding: 8px 20px 8px 50px;
+                    margin-bottom: 10px;
+                    border: none;
+                    border: 1px solid #DBE3FF;
+                    &::placeholder{
+                       color:#3B3B3B;
+                       font-size: 16px;
+                    }
+                                   @media only screen and (max-width: 992px) {
+                                       width: 100% !important;
+                                   }
+            }
+            span{
+                color: #ff0000;
+            }
+            .submit {
+                box-shadow: 0px 6px 18px #9CADF2;
+                box-sizing: border-box;
+                padding: 19px 0px;
+                border: none;
+                border-radius: 10px;
+                width: 450px;
+                color: white;
+                font-size: 16px;
+                background-image: linear-gradient(45deg, #2663DF 0%, #758FF0 100%);
+            }
+        }
+    }
+}

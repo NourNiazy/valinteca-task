@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+.container {
+    width: 1080px;
+    margin: 0 auto;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .content {
+        @include flex;
+    }
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+body {
+    margin: 0px;
+    font-family: 'Mulish', sans-serif;
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
